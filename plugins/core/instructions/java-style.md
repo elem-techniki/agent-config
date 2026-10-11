@@ -9,7 +9,7 @@ When writing Java:
 - Never use `var`; always declare the type.
 - Use specific collection types (`List`, `Set`, `Map`), not `Collection` or `Iterable`.
 - Use `Optional` to avoid null issues, as a return type only: not for fields, parameters or collections. Return an empty collection instead of `null` or `Optional<List<…>>`.
-- Immutability (`final` fields, records, unmodifiable collections) only where it is really needed, not by default.
+- Collections are mutable by default (`new ArrayList<>()`, `Collectors.toCollection(ArrayList::new)`). Use immutable ones (`List.of()`, `Set.of()`, `Map.of()`, `Stream.toList()`) only when the collection must definitely never change; if unsure, mutable.
 - Constructor injection only, never `@Autowired` on fields; dependencies are `private final`.
 - Thin controllers: they only take the request and return the response. All the work happens in services.
 - Controllers never expose JPA entities: use DTOs at the boundary, mapped in the service or a mapper.
