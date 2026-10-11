@@ -1,0 +1,8 @@
+{
+  "name": "core",
+  "version": "0.1.0",
+  "description": "Global working instructions (injected at session start) plus shared skills, agents and commands.",
+  "author": {
+    "name": "Elem-Techniki"
+  }
+}

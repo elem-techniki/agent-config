@@ -1,0 +1,16 @@
+{
+  "name": "elem-agent-config",
+  "owner": {
+    "name": "Elem-Techniki"
+  },
+  "metadata": {
+    "description": "Personal instructions and skills applied to every agentic development session, in every project."
+  },
+  "plugins": [
+    {
+      "name": "core",
+      "source": "./plugins/core",
+      "description": "Global working instructions (injected at session start) plus shared skills, agents and commands."
+    }
+  ]
+}
