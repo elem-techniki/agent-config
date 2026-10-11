@@ -55,10 +55,14 @@ git clone --depth 1 https://github.com/elem-techniki/agent-config /opt/agent-con
   || echo "agent-config: install skipped" >&2
 ```
 
-The `|| echo` keeps a failed clone from blocking the session. Check that it worked by
-running `/context` in a new session: the "Global instructions" block should appear. The
-setup result is cached with the environment for about 7 days. To pick up changes sooner,
-edit the setup script (any change forces a re-run).
+The `|| echo` keeps a failed clone from blocking the session. To check it worked, run
+`claude plugin list` in a new session (`core@elem-agent-config` should be enabled), or ask
+the agent whether it sees "Global instructions (from agent-config)". `/context` does not
+show hook-injected text, so it is not a reliable check.
+
+The setup result is cached with the environment for about 7 days, including a failed
+run. To pick up changes sooner, edit the setup script (e.g. bump a version comment);
+any change forces a re-run.
 
 ### Your machine
 
